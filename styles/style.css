@@ -7,12 +7,12 @@
   /*display: inline-block;*/
   display: inline-grid;
   gap: 40px;
-  background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background:
+    var(--background-color)
+    var(--background-image)
+    fixed
+    no-repeat
+    center / cover;
   min-inline-size: 375px;
   color: var(--text-color);
 }
@@ -38,18 +38,23 @@
 
 .decorate::after {
   content: "";
+  background-image: var(--decorate-backgroud-image);
+}
+
+.decorate::after {
+  content: "";
   color: var(--background-color);
   inline-size: 25px;
   block-size: 25px;
   border-top: 1px solid var(--decorate-color);
   border-right: 1px solid var(--decorate-color);
   background-color: var(--background-color);
-  background-image: var(--decorate-backgroud-image);
   position: absolute;
   object-fit: cover;
   object-position: center;
   margin-inline-start: 5px;
 }
+
 
 .decorated-zone::after {
   content: "";
@@ -87,31 +92,13 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button_type_dark:focus-visible {
+.header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid #353430;
+  border-bottom: 1px solid var(--button-focus-color);
 }
 
-.header__theme-menu-button_type_light:focus-visible {
-  outline: none;
-  border-bottom: 1px solid #ff0070;
-}
-
-.header__theme-menu-button_type_auto:focus-visible {
-  outline: none;
-  border-bottom: 1px solid #353430;
-}
-
-.header__theme-menu-button_type_dark:hover {
-  border: 1px solid rgba(53, 52, 48, 0.4);
-}
-
-.header__theme-menu-button_type_light:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
-}
-
-.header__theme-menu-button_type_auto:hover {
-  border: 1px solid rgba(53, 52, 48, 0.4);
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
 }
 
 .header__theme-menu-button_active {
@@ -275,32 +262,36 @@
     gap: 20px;
   }
 
-  .contetnt__section:nth-child(odd) {
+  .contetnt__section-type-one {
     grid-template-columns: 1fr 2fr;
   }
 
-  .contetnt__section:nth-child(1) .content__title {
+  .contetnt__section-type-one .content__title {
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
-  .contetnt__section:nth-child(3) .content__title {
+  .contetnt__section-type-three {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .contetnt__section-type-three .content__title {
     grid-row-start: 1;
     grid-row-end: 3;
   }
 
-  .contetnt__section:nth-child(3) .subtitle {
+  .contetnt__section-type-three .subtitle {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
-  .contetnt__section:nth-child(2) {
+  .contetnt__section-type-two {
     grid-template-columns: 1fr 2fr;
   }
 
-  .contetnt__section:nth-child(2) .content__title {
+  .contetnt__section-type-two .content__title {
     display: block;
     inline-size: 236px;
     grid-column-start: 1;
@@ -309,7 +300,7 @@
     grid-row-end: 2;
   }
 
-  .contetnt__section:nth-child(even) .content__list {
+  .contetnt__section-type-two .content__list {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -327,35 +318,35 @@
     grid-column-end: 4;
   }
 
-  .images .image-container:nth-child(2) {
+  .images .image-container-type-1 {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .images .image-container:nth-child(3) {
+  .images .image-container-type-2 {
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
   }
 
-  .images .image-container:nth-child(6) {
+  .images .image-container-type-3 {
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 4;
   }
 
-  .images .image-container:nth-child(4) {
+  .images .image-container-type-4 {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
   }
 
-  .images .image-container:nth-child(5) {
+  .images .image-container-type-6 {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
