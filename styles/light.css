@@ -3,19 +3,21 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-@media (prefers-color-scheme: light) {
   :root .theme_light {
     --text-color: #353430;
     --accent-color: #ff8dcb;
     --title-color: #353430;
     --subtitle-color: #353430;
-    --background-color: #ffdff1;
+    --background-color: #feedf6;
     --background-image: url(../images/cover-image-light.png);
-    --decorate-color: #ffdff1;
+    --decorate-color: #feedf6;
     --decorate-backgroud-image: none;
-    --basiс-title-color: #db00ff;
+    --basiс-title-color: #ffc2e6;
+    --button-hover-color: rgba(255, 0, 112, 0.4);
+    --button-active-color: #353430;
+    --decorate-color: #feedf6;
   }
-}
+
 .page .theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -33,5 +35,9 @@
     --background-image: url(../images/cover-image-light.png);
     --decorate-color: #ffdff1;
     --decorate-backgroud-image: none;
-    --basiс-title-color: #db00ff;
+    --basiс-title-color: #ffc2e6;;
+    --button-hover-color: rgba(255, 0, 112, 0.4);
+    --button-active-color: #353430;
+    --decorate-color: #feedf6;
   }
+}
