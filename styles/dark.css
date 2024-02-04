@@ -16,7 +16,6 @@
   --basiс-title-color: #db00ff;
   --button-hover-color: rgba(50, 49, 45, 0.4);
   --button-active-color: #ff0070;
-  --decorate-color: #ff0070;
 }
 
 .page .theme_dark {
@@ -40,6 +39,5 @@
     --basiс-title-color: #db00ff;
     --button-hover-color: rgba(50, 49, 45, 0.4);
     --button-active-color: #ff0070;
-    --decorate-color: #ff0070;
   }
 }
