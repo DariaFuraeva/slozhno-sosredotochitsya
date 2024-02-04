@@ -8,9 +8,10 @@
     --accent-color: #ff8dcb;
     --title-color: #353430;
     --subtitle-color: #353430;
-    --background-color: #fff9fc;
+    --background-color: #ffeaf4;
     --background-image: url(../images/cover-image-light.png);
-    --decorate-color: #fff9fc;
+    --decorate-text-color: #ffeaf4;
+    --decorate-color: #353430;
     --decorate-backgroud-image: none;
     --basiс-title-color: #ffc2e6;
     --button-hover-color: rgba(255, 0, 112, 0.4);
@@ -30,9 +31,10 @@
     --accent-color: #ff8dcb;
     --title-color: #353430;
     --subtitle-color: #353430;
-    --background-color: #fff9fc;
+    --background-color: #ffeaf4;
     --background-image: url(../images/cover-image-light.png);
-    --decorate-color: #fff9fc;
+    --decorate-text-color: #ffeaf4;
+    --decorate-color: #353430;
     --decorate-backgroud-image: none;
     --basiс-title-color: #ffc2e6;
     --button-hover-color: rgba(255, 0, 112, 0.4);

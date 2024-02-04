@@ -28,7 +28,7 @@
 }
 
 .decorate {
-  color: var(--decorate-color);
+  color: var(--decorate-text-color);
   font-size: 18px;
   line-height: 1.39;
   justify-self: end;
