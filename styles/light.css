@@ -23,3 +23,15 @@
   */
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --title-color: #353430;
+    --subtitle-color: #353430;
+    --background-color: #ffdff1;
+    --background-image: url(../images/cover-image-light.png);
+    --decorate-color: #ffdff1;
+    --decorate-backgroud-image: none;
+    --basiс-title-color: #db00ff;
+  }

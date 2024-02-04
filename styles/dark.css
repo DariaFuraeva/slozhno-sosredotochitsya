@@ -22,3 +22,18 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --title-color: #ff0070;
+    --subtitle-color: #000028;
+    --title-background-color: #ff0070;
+    --background-color: #000028;
+    --background-image: url(../images/cover-image-dark.png);
+    --decorate-color: #ff0070;
+    --decorate-backgroud-image: url(../images/Ellipse\ 4.png);
+    --basiс-title-color: #db00ff;
+  }
+}
