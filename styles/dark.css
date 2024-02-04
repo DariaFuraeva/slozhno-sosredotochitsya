@@ -3,8 +3,20 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root .theme_dark {
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --title-color: #ff0070;
+  --subtitle-color: #000028;
+  --title-background-color: #ff0070;
+  --background-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
+  --decorate-color: #ff0070;
+  --decorate-backgroud-image: url(../images/Ellipse\ 4.png);
+  --basiс-title-color: #db00ff;
+}
 
-.page.theme_dark {
+.page .theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
