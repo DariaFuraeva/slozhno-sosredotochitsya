@@ -14,9 +14,10 @@
     --decorate-color: #353430;
     --decorate-backgroud-image: none;
     --basiс-title-color: #ffc2e6;
-    --button-hover-color: rgba(255, 0, 112, 0.4);
+    --button-text-color: #353430;
+    --button-hover-color: rgba(50, 49, 45, 0.4);
     --button-active-color: #353430;
-    --button-focus-color: #ff0070;
+    --button-focus-color: #353430;
   }
 
 @media (prefers-color-scheme: light) {
@@ -31,8 +32,9 @@
     --decorate-color: #353430;
     --decorate-backgroud-image: none;
     --basiс-title-color: #ffc2e6;
-    --button-hover-color: rgba(255, 0, 112, 0.4);
+    --button-text-color: #353430;
+    --button-hover-color: rgba(50, 49, 45, 0.4);
     --button-active-color: #353430;
-    --button-focus-color: #ff0070;
+    --button-focus-color: #353430;
   }
 }

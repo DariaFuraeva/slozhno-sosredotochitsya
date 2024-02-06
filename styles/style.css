@@ -1,11 +1,21 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Для проверки в Pixel Perfet
+.pixel-perfect-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+    filter: sepia(0.6);
+}
+*/
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex Mono", sans serif;
   font-weight: 400;
   /*display: inline-block;*/
-  display: inline-grid;
+  display: grid;
   gap: 40px;
   background:
     var(--background-color)
@@ -15,6 +25,7 @@
     center / cover;
   min-inline-size: 375px;
   color: var(--text-color);
+  position: relative;
 }
 
 .header {
@@ -36,37 +47,52 @@
   inset: 10px 38px auto auto;
 }
 
-.decorate::after {
+/*.decorated-zone::before {
   content: "";
-  background-image: var(--decorate-backgroud-image);
-}
-
-.decorate::after {
-  content: "";
-  color: var(--background-color);
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--decorate-color);
-  border-right: 1px solid var(--decorate-color);
-  background-color: var(--background-color);
+  background-image: var(--decorate-backgroud-image);
   position: absolute;
   object-fit: cover;
   object-position: center;
-  margin-inline-start: 5px;
-}
+  inset: 10px 10px auto auto ;
+}*/
 
+.decorate::after {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  background-image: var(--decorate-backgroud-image);
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  inset: 3px 0 0 34px;
+}
 
 .decorated-zone::after {
   content: "";
-  color: var(--accent-color);
+  color: var(--decorate-color);
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decorate-color);
+  border-left: 1px solid var(--decorate-color);
   position: absolute;
   object-fit: cover;
   object-position: center;
   inset: auto auto 10px 10px;
+}
+
+.decorated-zone::before {
+  content: "";
+  color: var(--decorate-color);
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--decorate-color);
+  border-right: 1px solid var(--decorate-color);
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  inset: 10px 10px auto auto;
 }
 
 .header__theme-menu {
@@ -80,9 +106,9 @@
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--button-text-color);
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);*/
   background-color: transparent;
   border: none;
   font-size: 18px;
@@ -90,6 +116,7 @@
   line-height: 1;
   padding: 1.5px 13px;
   cursor: pointer;
+  /*transition: border 0.3s;*/
 }
 
 .header__theme-menu-button:focus-visible {
@@ -173,7 +200,7 @@
 }
 
 .content__link {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
@@ -190,7 +217,7 @@
 .images {
   width: 100%;
   display: grid;
-  gap: 7px;
+  gap: 10px;
 }
 
 .image-container {
@@ -198,7 +225,7 @@
 }
 
 .image {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -241,12 +268,12 @@
     justify-self: end;
   }
 
-  /*.header__theme-menu-list {
-    grid-template-columns: repeat(3, auto);
-  }*/
-
   .decorate {
     inset: 20px 48px auto auto;
+  }
+
+  .decorated-zone::before {
+    inset: 20px 20px auto auto;
   }
 
   .decorated-zone::after {
@@ -309,8 +336,9 @@
 
   .images {
     display: grid;
-    gap: 15px;
+    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
   }
 
   .images .subtitle {
@@ -318,35 +346,35 @@
     grid-column-end: 4;
   }
 
-  .images .image-container-type-1 {
+  .images .image-type-1 {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .images .image-container-type-2 {
+  .images .image-type-2 {
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 4;
   }
 
-  .images .image-container-type-3 {
+  .images .image-type-3 {
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 2;
     grid-column-end: 4;
   }
 
-  .images .image-container-type-4 {
+  .images .image-type-4 {
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
   }
 
-  .images .image-container-type-6 {
+  .images .image-type-5 {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;

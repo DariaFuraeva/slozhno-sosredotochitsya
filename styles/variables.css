@@ -8,9 +8,15 @@
   --accent-color: #ff0070;
   --title-color: #ff0070;
   --subtitle-color: #000028;
+  --title-background-color: #ff0070;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
+  --decorate-text-color: #ff0070;
   --decorate-color: #ff0070;
   --decorate-backgroud-image: url(../images/Ellipse\ 4.png);
   --basiс-title-color: #db00ff;
+  --button-text-color: #ff0070;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --button-active-color: #ff0070;
+  --button-focus-color: #ff0070;
 }
